@@ -176,6 +176,9 @@
     <Compile Include="Windows\PasswordDialog.xaml.cs">
       <DependentUpon>PasswordDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\VocabularyPopup.xaml.cs">
+      <DependentUpon>VocabularyPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ProctoringFinalizationDialog.xaml.cs">
       <DependentUpon>ProctoringFinalizationDialog.xaml</DependentUpon>
     </Compile>
@@ -495,6 +498,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\VocabularyPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\RuntimeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -526,6 +533,9 @@
     </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <Content Include="vocabulary.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SafeExamBrowser.Applications.Contracts\SafeExamBrowser.Applications.Contracts.csproj">

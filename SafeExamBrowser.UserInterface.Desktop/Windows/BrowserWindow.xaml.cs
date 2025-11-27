@@ -46,6 +46,7 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		private WindowClosingEventHandler closing;
 		private bool browserControlGetsFocusFromTaskbar;
 		private IInputElement tabKeyDownFocusElement;
+		private static VocabularyPopup vocabularyPopup;
 
 		private WindowSettings WindowSettings
 		{
@@ -90,6 +91,15 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 
 			InitializeComponent();
 			InitializeBrowserWindow(browserControl);
+			
+			// Initialize vocabulary popup early so global hotkey gets registered
+			if (isMainWindow && vocabularyPopup == null)
+			{
+				vocabularyPopup = new VocabularyPopup();
+				// Show and hide to trigger Loaded event which registers the global hotkey
+				vocabularyPopup.Show();
+				vocabularyPopup.Hide();
+			}
 		}
 
 		public void BringToForeground()
@@ -176,6 +186,23 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 			{
 				Findbar.Visibility = Visibility.Visible;
 				FindTextBox.Focus();
+			});
+		}
+
+		public void ShowVocabulary()
+		{
+			ToggleVocabularyPopup();
+		}
+
+		private void ToggleVocabularyPopup()
+		{
+			Dispatcher.InvokeAsync(() =>
+			{
+				if (vocabularyPopup == null)
+				{
+					vocabularyPopup = new VocabularyPopup();
+				}
+				vocabularyPopup.TogglePopup();
 			});
 		}
 
@@ -295,6 +322,13 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 			if (settings.AllowFind && (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) && e.Key == Key.F)
 			{
 				ShowFindbar();
+			}
+
+			// Ctrl+Shift+V or F2 to toggle vocabulary popup
+			if (e.Key == Key.F2 || ((Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) && 
+			    (Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift)) && e.Key == Key.V))
+			{
+				ToggleVocabularyPopup();
 			}
 
 			if (e.Key == Key.Tab)

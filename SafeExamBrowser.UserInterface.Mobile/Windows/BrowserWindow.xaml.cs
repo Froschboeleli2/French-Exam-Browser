@@ -179,6 +179,11 @@ namespace SafeExamBrowser.UserInterface.Mobile.Windows
 			});
 		}
 
+		public void ShowVocabulary()
+		{
+			// Not implemented for mobile
+		}
+
 		public void UpdateAddress(string url)
 		{
 			Dispatcher.Invoke(() => UrlTextBox.Text = url);

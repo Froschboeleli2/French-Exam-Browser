@@ -195,6 +195,7 @@ namespace SafeExamBrowser.Browser
 			keyboardHandler.HomeNavigationRequested += HomeNavigationRequested;
 			keyboardHandler.ReloadRequested += ReloadRequested;
 			keyboardHandler.TabPressed += KeyboardHandler_TabPressed;
+			keyboardHandler.VocabularyRequested += KeyboardHandler_VocabularyRequested;
 			keyboardHandler.ZoomInRequested += ZoomInRequested;
 			keyboardHandler.ZoomOutRequested += ZoomOutRequested;
 			keyboardHandler.ZoomResetRequested += ZoomResetRequested;
@@ -546,6 +547,11 @@ namespace SafeExamBrowser.Browser
 			{
 				window.ShowFindbar();
 			}
+		}
+
+		private void KeyboardHandler_VocabularyRequested()
+		{
+			window.ShowVocabulary();
 		}
 
 		private void KeyboardHandler_FocusAddressBarRequested()

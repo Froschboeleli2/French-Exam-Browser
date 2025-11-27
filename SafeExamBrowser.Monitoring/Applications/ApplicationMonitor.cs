@@ -132,13 +132,7 @@ namespace SafeExamBrowser.Monitoring.Applications
 				logger.Debug($"Window has changed from {activeWindow} to {window}.");
 				activeWindow = window;
 
-				Task.Run(() =>
-				{
-					if (!IsAllowed(window) && !TryHide(window))
-					{
-						Close(window);
-					}
-				});
+				// All applications are allowed - don't hide or close any windows
 			}
 		}
 
@@ -353,34 +347,14 @@ namespace SafeExamBrowser.Monitoring.Applications
 
 		private bool IsAllowed(IProcess process)
 		{
-			foreach (var application in blacklist)
-			{
-				if (BelongsToApplication(process, application))
-				{
-					logger.Warn($"Process {process} belongs to blacklisted application '{application.ExecutableName}'!");
-
-					return false;
-				}
-			}
-
+			// All processes are allowed
 			return true;
 		}
 
 		private bool IsAllowed(Window window)
 		{
-			var allowed = false;
-
-			if (TryGetProcessFor(window, out var process))
-			{
-				allowed = BelongsToSafeExamBrowser(process) || IsWhitelisted(process, out _);
-			}
-
-			if (!allowed)
-			{
-				logger.Warn($"Window {window} belongs to not whitelisted process '{process?.Name ?? "n/a"}'!");
-			}
-
-			return allowed;
+			// All windows are allowed
+			return true;
 		}
 
 		private bool IsWhitelisted(IProcess process, out Guid? applicationId)

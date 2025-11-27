@@ -1,0 +1,166 @@
+# Vocabulary List - German <-> English
+# Format: word1 = word2 (works both directions)
+# Lines starting with # are comments
+# Not case sensitive, fuzzy matching enabled
+
+# Fruits
+Apfel = Apple
+Birne = Pear
+Banane = Banana
+Orange = Orange
+Traube = Grape
+Erdbeere = Strawberry
+Kirsche = Cherry
+Zitrone = Lemon
+
+# House
+Haus = House
+Tür = Door
+Fenster = Window
+Tisch = Table
+Stuhl = Chair
+Bett = Bed
+Küche = Kitchen
+Bad = Bathroom
+Zimmer = Room
+Wand = Wall
+Boden = Floor
+Dach = Roof
+
+# Food & Drink
+Wasser = Water
+Brot = Bread
+Milch = Milk
+Käse = Cheese
+Butter = Butter
+Ei = Egg
+Fleisch = Meat
+Fisch = Fish
+Gemüse = Vegetables
+Obst = Fruit
+Salz = Salt
+Zucker = Sugar
+Kaffee = Coffee
+Tee = Tea
+
+# Animals
+Hund = Dog
+Katze = Cat
+Vogel = Bird
+Pferd = Horse
+Kuh = Cow
+Schwein = Pig
+Schaf = Sheep
+Maus = Mouse
+Fisch = Fish
+Bär = Bear
+
+# Nature
+Baum = Tree
+Blume = Flower
+Sonne = Sun
+Mond = Moon
+Stern = Star
+Himmel = Sky
+Wolke = Cloud
+Regen = Rain
+Schnee = Snow
+Wind = Wind
+Berg = Mountain
+Fluss = River
+See = Lake
+Meer = Sea
+Wald = Forest
+
+# School
+Schule = School
+Lehrer = Teacher
+Schüler = Student
+Buch = Book
+Heft = Notebook
+Stift = Pen
+Bleistift = Pencil
+Tafel = Blackboard
+Klasse = Class
+Hausaufgabe = Homework
+
+# Transport
+Auto = Car
+Fahrrad = Bicycle
+Bus = Bus
+Zug = Train
+Flugzeug = Airplane
+Schiff = Ship
+Straße = Street
+Weg = Way
+
+# Body
+Kopf = Head
+Auge = Eye
+Nase = Nose
+Mund = Mouth
+Ohr = Ear
+Hand = Hand
+Fuß = Foot
+Arm = Arm
+Bein = Leg
+Herz = Heart
+
+# Time
+Tag = Day
+Nacht = Night
+Morgen = Morning
+Abend = Evening
+Woche = Week
+Monat = Month
+Jahr = Year
+Stunde = Hour
+Minute = Minute
+Heute = Today
+Gestern = Yesterday
+Morgen = Tomorrow
+
+# Colors
+Rot = Red
+Blau = Blue
+Grün = Green
+Gelb = Yellow
+Schwarz = Black
+Weiß = White
+Grau = Gray
+Braun = Brown
+Rosa = Pink
+Lila = Purple
+
+# Numbers
+Eins = One
+Zwei = Two
+Drei = Three
+Vier = Four
+Fünf = Five
+Sechs = Six
+Sieben = Seven
+Acht = Eight
+Neun = Nine
+Zehn = Ten
+Hundert = Hundred
+Tausend = Thousand
+
+# Common words
+Ja = Yes
+Nein = No
+Danke = Thank you
+Bitte = Please
+Hallo = Hello
+Tschüss = Goodbye
+Gut = Good
+Schlecht = Bad
+Groß = Big
+Klein = Small
+Neu = New
+Alt = Old
+Schnell = Fast
+Langsam = Slow
+Heiß = Hot
+Kalt = Cold
+

@@ -1,3 +1,5 @@
+SafeExamBrowser.UserInterface.Desktop
+
 # Security Policy
 
 We only support the latest official release version with respect to security vulnerabilities. Thus, only the latest or then the upcoming next release version

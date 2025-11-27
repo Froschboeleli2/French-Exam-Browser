@@ -112,6 +112,11 @@ namespace SafeExamBrowser.UserInterface.Contracts.Browser
 		void ShowFindbar();
 
 		/// <summary>
+		/// Displays the vocabulary popup for translations.
+		/// </summary>
+		void ShowVocabulary();
+
+		/// <summary>
 		/// Updates the address bar of the browser window to the given value.
 		/// </summary>
 		void UpdateAddress(string adress);

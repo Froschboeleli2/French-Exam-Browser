@@ -1,0 +1,321 @@
+MSBuild version 17.14.23+b0019275e for .NET Framework
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Settings\SafeExamBrowser.Settings.csproj]
+  SafeExamBrowser.Settings -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Settings\bin\x64\Debug\SafeExamBrowser.Settings.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Configuration.Contracts\SafeExamBrowser.Configuration.Contracts.csproj]
+  SafeExamBrowser.Configuration.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Configuration.Contracts\bin\x64\Debug\SafeExamBrowser.Configuration.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Communication.Contracts\SafeExamBrowser.Communication.Contracts.csproj]
+  SafeExamBrowser.Communication.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Communication.Contracts\bin\x64\Debug\SafeExamBrowser.Communication.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Logging.Contracts\SafeExamBrowser.Logging.Contracts.csproj]
+  SafeExamBrowser.Logging.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Logging.Contracts\bin\x64\Debug\SafeExamBrowser.Logging.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Communication\SafeExamBrowser.Communication.csproj]
+  SafeExamBrowser.Communication -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Communication\bin\x64\Debug\SafeExamBrowser.Communication.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Configuration\SafeExamBrowser.Configuration.csproj]
+  SafeExamBrowser.Configuration -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Configuration\bin\x64\Debug\SafeExamBrowser.Configuration.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.I18n.Contracts\SafeExamBrowser.I18n.Contracts.csproj]
+  SafeExamBrowser.I18n.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.I18n.Contracts\bin\x64\Debug\SafeExamBrowser.I18n.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Core.Contracts\SafeExamBrowser.Core.Contracts.csproj]
+  SafeExamBrowser.Core.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Core.Contracts\bin\x64\Debug\SafeExamBrowser.Core.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Core\SafeExamBrowser.Core.csproj]
+  SafeExamBrowser.Core -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Core\bin\x64\Debug\SafeExamBrowser.Core.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.I18n\SafeExamBrowser.I18n.csproj]
+  SafeExamBrowser.I18n -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.I18n\bin\x64\Debug\SafeExamBrowser.I18n.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Logging\SafeExamBrowser.Logging.csproj]
+  SafeExamBrowser.Logging -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Logging\bin\x64\Debug\SafeExamBrowser.Logging.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.WindowsApi.Contracts\SafeExamBrowser.WindowsApi.Contracts.csproj]
+  SafeExamBrowser.WindowsApi.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.WindowsApi.Contracts\bin\x64\Debug\SafeExamBrowser.WindowsApi.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Monitoring.Contracts\SafeExamBrowser.Monitoring.Contracts.csproj]
+  SafeExamBrowser.Monitoring.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Monitoring.Contracts\bin\x64\Debug\SafeExamBrowser.Monitoring.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.SystemComponents.Contracts\SafeExamBrowser.SystemComponents.Contracts.csproj]
+  SafeExamBrowser.SystemComponents.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.SystemComponents.Contracts\bin\x64\Debug\SafeExamBrowser.SystemComponents.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Monitoring\SafeExamBrowser.Monitoring.csproj]
+  SafeExamBrowser.Monitoring -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Monitoring\bin\x64\Debug\SafeExamBrowser.Monitoring.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Server.Contracts\SafeExamBrowser.Server.Contracts.csproj]
+  SafeExamBrowser.Server.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Server.Contracts\bin\x64\Debug\SafeExamBrowser.Server.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Server\SafeExamBrowser.Server.csproj]
+  SafeExamBrowser.Server -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Server\bin\x64\Debug\SafeExamBrowser.Server.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.SystemComponents\SafeExamBrowser.SystemComponents.csproj]
+  SafeExamBrowser.SystemComponents -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.SystemComponents\bin\x64\Debug\SafeExamBrowser.SystemComponents.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Applications.Contracts\SafeExamBrowser.Applications.Contracts.csproj]
+  SafeExamBrowser.Applications.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Applications.Contracts\bin\x64\Debug\SafeExamBrowser.Applications.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser.Contracts\SafeExamBrowser.Browser.Contracts.csproj]
+  SafeExamBrowser.Browser.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser.Contracts\bin\x64\Debug\SafeExamBrowser.Browser.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Proctoring.Contracts\SafeExamBrowser.Proctoring.Contracts.csproj]
+  SafeExamBrowser.Proctoring.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Proctoring.Contracts\bin\x64\Debug\SafeExamBrowser.Proctoring.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Contracts\SafeExamBrowser.UserInterface.Contracts.csproj]
+  SafeExamBrowser.UserInterface.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Contracts\bin\x64\Debug\SafeExamBrowser.UserInterface.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Shared\SafeExamBrowser.UserInterface.Shared.csproj]
+  SafeExamBrowser.UserInterface.Shared -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Shared\bin\x64\Debug\SafeExamBrowser.UserInterface.Shared.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Desktop\SafeExamBrowser.UserInterface.Desktop_saxmtadg_wpftmp.csproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Desktop\SafeExamBrowser.UserInterface.Desktop.csproj]
+  SafeExamBrowser.UserInterface.Desktop -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Desktop\bin\x64\Debug\SafeExamBrowser.UserInterface.Desktop.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.WindowsApi\SafeExamBrowser.WindowsApi.csproj]
+  SafeExamBrowser.WindowsApi -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.WindowsApi\bin\x64\Debug\SafeExamBrowser.WindowsApi.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Runtime\SafeExamBrowser.Runtime.csproj]
+  SafeExamBrowser.Runtime -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Runtime\bin\x64\Debug\SafeExamBrowser.exe
+EXEC : warning : Integrity module not included! [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Runtime\SafeExamBrowser.Runtime.csproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Core.UnitTests\SafeExamBrowser.Core.UnitTests.csproj]
+  SafeExamBrowser.Core.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Core.UnitTests\bin\x64\Debug\SafeExamBrowser.Core.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser\SafeExamBrowser.Browser.csproj]
+  SafeExamBrowser.Browser -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser\bin\x64\Debug\SafeExamBrowser.Browser.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Applications\SafeExamBrowser.Applications.csproj]
+  SafeExamBrowser.Applications -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Applications\bin\x64\Debug\SafeExamBrowser.Applications.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Proctoring\SafeExamBrowser.Proctoring.csproj]
+  SafeExamBrowser.Proctoring -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Proctoring\bin\x64\Debug\SafeExamBrowser.Proctoring.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Mobile\SafeExamBrowser.UserInterface.Mobile_vtkn1mc3_wpftmp.csproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Mobile\SafeExamBrowser.UserInterface.Mobile.csproj]
+  SafeExamBrowser.UserInterface.Mobile -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.UserInterface.Mobile\bin\x64\Debug\SafeExamBrowser.UserInterface.Mobile.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client\SafeExamBrowser.Client.csproj]
+  SafeExamBrowser.Client -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client\bin\x64\Debug\SafeExamBrowser.Client.exe
+  
+  -------------------------------------------------------------------------------
+     ROBOCOPY     ::     Robust File Copy for Windows                              
+  -------------------------------------------------------------------------------
+  
+    Started : Donnerstag, 27. November 2025 17:35:48
+     Source : C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser\bin\x64\Debug\
+       Dest : C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client\bin\x64\Debug\
+  
+      Files : *.*
+  	    
+    Options : *.* /S /E /DCOPY:DA /COPY:DAT /NP /R:1000000 /W:30 
+  
+  ------------------------------------------------------------------------------
+  
+  	                  64	C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser\bin\x64\Debug\
+  	  *EXTRA File 		   4.4 m	BouncyCastle.Cryptography.dll
+  	  *EXTRA File 		   1.7 m	BouncyCastle.Cryptography.xml
+  	  *EXTRA File 		  209408	FontAwesome.WPF.dll
+  	  *EXTRA File 		  183668	FontAwesome.WPF.xml
+  	  *EXTRA File 		   1.1 m	KGySoft.CoreLibraries.dll
+  	  *EXTRA File 		   3.5 m	KGySoft.CoreLibraries.xml
+  	  *EXTRA File 		  832512	KGySoft.Drawing.Core.dll
+  	  *EXTRA File 		   3.3 m	KGySoft.Drawing.Core.xml
+  	  *EXTRA File 		   1.1 m	KGySoft.Drawing.dll
+  	  *EXTRA File 		  614706	KGySoft.Drawing.xml
+  	  *EXTRA File 		  187904	NAudio.Core.dll
+  	  *EXTRA File 		  179200	NAudio.Wasapi.dll
+  	  *EXTRA File 		   20992	SafeExamBrowser.Applications.dll
+  	  *EXTRA File 		   60928	SafeExamBrowser.Applications.pdb
+  	  *EXTRA File 		  836608	SafeExamBrowser.Client.exe
+  	  *EXTRA File 		    1299	SafeExamBrowser.Client.exe.config
+  	  *EXTRA File 		  210432	SafeExamBrowser.Client.pdb
+  	  *EXTRA File 		   27136	SafeExamBrowser.Communication.Contracts.dll
+  	  *EXTRA File 		  192000	SafeExamBrowser.Communication.Contracts.pdb
+  	  *EXTRA File 		   28672	SafeExamBrowser.Communication.dll
+  	  *EXTRA File 		   77312	SafeExamBrowser.Communication.pdb
+  	  *EXTRA File 		  129024	SafeExamBrowser.Configuration.dll
+  	  *EXTRA File 		  271872	SafeExamBrowser.Configuration.pdb
+  	  *EXTRA File 		   12288	SafeExamBrowser.Core.dll
+  	  *EXTRA File 		   42496	SafeExamBrowser.Core.pdb
+  	  *EXTRA File 		  431104	SafeExamBrowser.I18n.dll
+  	  *EXTRA File 		   26112	SafeExamBrowser.I18n.pdb
+  	  *EXTRA File 		   11776	SafeExamBrowser.Logging.dll
+  	  *EXTRA File 		   54784	SafeExamBrowser.Logging.pdb
+  	  *EXTRA File 		   10240	SafeExamBrowser.Monitoring.Contracts.dll
+  	  *EXTRA File 		   67072	SafeExamBrowser.Monitoring.Contracts.pdb
+  	  *EXTRA File 		   51712	SafeExamBrowser.Monitoring.dll
+  	  *EXTRA File 		  118272	SafeExamBrowser.Monitoring.pdb
+  	  *EXTRA File 		   64512	SafeExamBrowser.Proctoring.dll
+  	  *EXTRA File 		     682	SafeExamBrowser.Proctoring.dll.config
+  	  *EXTRA File 		  224768	SafeExamBrowser.Proctoring.pdb
+  	  *EXTRA File 		   47104	SafeExamBrowser.Server.dll
+  	  *EXTRA File 		  163328	SafeExamBrowser.Server.pdb
+  	  *EXTRA File 		   46080	SafeExamBrowser.SystemComponents.dll
+  	  *EXTRA File 		     528	SafeExamBrowser.SystemComponents.dll.config
+  	  *EXTRA File 		   99840	SafeExamBrowser.SystemComponents.pdb
+  	  *EXTRA File 		  854528	SafeExamBrowser.UserInterface.Desktop.dll
+  	  *EXTRA File 		     531	SafeExamBrowser.UserInterface.Desktop.dll.config
+  	  *EXTRA File 		  634368	SafeExamBrowser.UserInterface.Desktop.pdb
+  	  *EXTRA File 		  860160	SafeExamBrowser.UserInterface.Mobile.dll
+  	  *EXTRA File 		  839168	SafeExamBrowser.UserInterface.Mobile.pdb
+  	  *EXTRA File 		   22528	SafeExamBrowser.UserInterface.Shared.dll
+  	  *EXTRA File 		   91648	SafeExamBrowser.UserInterface.Shared.pdb
+  	  *EXTRA File 		   43520	SafeExamBrowser.WindowsApi.dll
+  	  *EXTRA File 		  130560	SafeExamBrowser.WindowsApi.pdb
+  	                  55	C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser\bin\x64\Debug\locales\
+  
+  ------------------------------------------------------------------------------
+  
+                 Total    Copied   Skipped  Mismatch    FAILED    Extras
+      Dirs :         2         0         2         0         0         0
+     Files :       119         0       119         0         0        50
+     Bytes :  389.89 m         0  389.89 m         0         0   24.06 m
+     Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+     Ended : Donnerstag, 27. November 2025 17:35:48
+  
+  
+  -------------------------------------------------------------------------------
+     ROBOCOPY     ::     Robust File Copy for Windows                              
+  -------------------------------------------------------------------------------
+  
+    Started : Donnerstag, 27. November 2025 17:35:48
+     Source : C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client\bin\x64\Debug\
+       Dest : C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Runtime\bin\x64\Debug\
+  
+      Files : *.*
+  	    
+    Options : *.* /S /E /DCOPY:DA /COPY:DAT /NP /R:1000000 /W:30 
+  
+  ------------------------------------------------------------------------------
+  
+  	                 114	C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client\bin\x64\Debug\
+  	  *EXTRA File 		  826368	SafeExamBrowser.exe
+  	  *EXTRA File 		     808	SafeExamBrowser.exe.config
+  	  *EXTRA File 		  196096	SafeExamBrowser.pdb
+  	    New File  		   4.4 m	BouncyCastle.Cryptography.dll
+  	    New File  		   1.7 m	BouncyCastle.Cryptography.xml
+  	    New File  		   1.4 m	CefSharp.BrowserSubprocess.Core.dll
+  	    New File  		  13.7 m	CefSharp.BrowserSubprocess.Core.pdb
+  	    New File  		    6656	CefSharp.BrowserSubprocess.exe
+  	    New File  		   19968	CefSharp.BrowserSubprocess.pdb
+  	    New File  		   1.0 m	CefSharp.Core.dll
+  	    New File  		   2.6 m	CefSharp.Core.pdb
+  	    New File  		   2.0 m	CefSharp.Core.Runtime.dll
+  	    New File  		  15.0 m	CefSharp.Core.Runtime.pdb
+  	    New File  		  600169	CefSharp.Core.Runtime.xml
+  	    New File  		   1.6 m	CefSharp.Core.xml
+  	    New File  		  284160	CefSharp.dll
+  	    New File  		   1.0 m	CefSharp.pdb
+  	    New File  		   54784	CefSharp.WinForms.dll
+  	    New File  		  159232	CefSharp.WinForms.pdb
+  	    New File  		  105797	CefSharp.WinForms.xml
+  	    New File  		  944012	CefSharp.xml
+  	    New File  		  779103	chrome_100_percent.pak
+  	    New File  		   1.2 m	chrome_200_percent.pak
+  	    New File  		   1.6 m	chrome_elf.dll
+  	    New File  		   4.4 m	d3dcompiler_47.dll
+  	    New File  		  24.6 m	dxcompiler.dll
+  	    New File  		   1.4 m	dxil.dll
+  	    New File  		   9.9 m	icudtl.dat
+  	    New File  		   1.1 m	KGySoft.CoreLibraries.dll
+  	    New File  		   3.5 m	KGySoft.CoreLibraries.xml
+  	    New File  		  832512	KGySoft.Drawing.Core.dll
+  	    New File  		   3.3 m	KGySoft.Drawing.Core.xml
+  	    New File  		   1.1 m	KGySoft.Drawing.dll
+  	    New File  		  614706	KGySoft.Drawing.xml
+  	    New File  		 230.1 m	libcef.dll
+  	    New File  		  499712	libEGL.dll
+  	    New File  		   7.5 m	libGLESv2.dll
+  	    New File  		  11.2 m	resources.pak
+  	    New File  		   20992	SafeExamBrowser.Applications.dll
+  	    New File  		   60928	SafeExamBrowser.Applications.pdb
+  	    New File  		  142336	SafeExamBrowser.Browser.dll
+  	    New File  		     537	SafeExamBrowser.Browser.dll.config
+  	    New File  		  321024	SafeExamBrowser.Browser.pdb
+  	    New File  		  836608	SafeExamBrowser.Client.exe
+  	    New File  		    1299	SafeExamBrowser.Client.exe.config
+  	    New File  		  210432	SafeExamBrowser.Client.pdb
+  	    New File  		   64512	SafeExamBrowser.Proctoring.dll
+  	    New File  		     682	SafeExamBrowser.Proctoring.dll.config
+  	    New File  		  224768	SafeExamBrowser.Proctoring.pdb
+  	    New File  		  860160	SafeExamBrowser.UserInterface.Mobile.dll
+  	    New File  		  839168	SafeExamBrowser.UserInterface.Mobile.pdb
+  	    New File  		   30720	Syroot.KnownFolders.dll
+  	    New File  		  203612	Syroot.KnownFolders.xml
+  	    New File  		   18312	System.Security.Principal.Windows.dll
+  	    New File  		   90968	System.Security.Principal.Windows.xml
+  	    New File  		  709009	v8_context_snapshot.bin
+  	    New File  		   5.0 m	vk_swiftshader.dll
+  	    New File  		     106	vk_swiftshader_icd.json
+  	    New File  		  908288	vulkan-1.dll
+  	  New Dir         55	C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client\bin\x64\Debug\locales\
+  	    New File  		  608794	af.pak
+  	    New File  		  976990	am.pak
+  	    New File  		   1.0 m	ar.pak
+  	    New File  		   1.0 m	bg.pak
+  	    New File  		   1.3 m	bn.pak
+  	    New File  		  690041	ca.pak
+  	    New File  		  702039	cs.pak
+  	    New File  		  641287	da.pak
+  	    New File  		  690110	de.pak
+  	    New File  		   1.1 m	el.pak
+  	    New File  		  555103	en-GB.pak
+  	    New File  		  560956	en-US.pak
+  	    New File  		  675475	es-419.pak
+  	    New File  		  671827	es.pak
+  	    New File  		  615533	et.pak
+  	    New File  		  998099	fa.pak
+  	    New File  		  624998	fi.pak
+  	    New File  		  706598	fil.pak
+  	    New File  		  727990	fr.pak
+  	    New File  		   1.3 m	gu.pak
+  	    New File  		  881065	he.pak
+  	    New File  		   1.4 m	hi.pak
+  	    New File  		  680519	hr.pak
+  	    New File  		  730214	hu.pak
+  	    New File  		  605983	id.pak
+  	    New File  		  669156	it.pak
+  	    New File  		  807629	ja.pak
+  	    New File  		   1.5 m	kn.pak
+  	    New File  		  685346	ko.pak
+  	    New File  		  736031	lt.pak
+  	    New File  		  735055	lv.pak
+  	    New File  		   1.5 m	ml.pak
+  	    New File  		   1.3 m	mr.pak
+  	    New File  		  635382	ms.pak
+  	    New File  		  613645	nb.pak
+  	    New File  		  636129	nl.pak
+  	    New File  		  706336	pl.pak
+  	    New File  		  662533	pt-BR.pak
+  	    New File  		  667656	pt-PT.pak
+  	    New File  		  691241	ro.pak
+  	    New File  		   1.0 m	ru.pak
+  	    New File  		  714891	sk.pak
+  	    New File  		  686160	sl.pak
+  	    New File  		 1048248	sr.pak
+  	    New File  		  618359	sv.pak
+  	    New File  		  652016	sw.pak
+  	    New File  		   1.5 m	ta.pak
+  	    New File  		   1.4 m	te.pak
+  	    New File  		   1.2 m	th.pak
+  	    New File  		  663487	tr.pak
+  	    New File  		   1.0 m	uk.pak
+  	    New File  		  988620	ur.pak
+  	    New File  		  786757	vi.pak
+  	    New File  		  567211	zh-CN.pak
+  	    New File  		  562947	zh-TW.pak
+  
+  ------------------------------------------------------------------------------
+  
+                 Total    Copied   Skipped  Mismatch    FAILED    Extras
+      Dirs :         2         1         1         0         0         0
+     Files :       169       111        58         0         0         3
+     Bytes :  413.95 m  407.30 m    6.64 m         0         0   999.2 k
+     Times :   0:00:01   0:00:01                       0:00:00   0:00:00
+  
+  
+     Speed :           226'452'431 Bytes/sec.
+     Speed :            12'957.712 MegaBytes/min.
+     Ended : Donnerstag, 27. November 2025 17:35:50
+  
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client.UnitTests\SafeExamBrowser.Client.UnitTests.csproj]
+  SafeExamBrowser.Client.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Client.UnitTests\bin\x64\Debug\SafeExamBrowser.Client.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Runtime.UnitTests\SafeExamBrowser.Runtime.UnitTests.csproj]
+  SafeExamBrowser.Runtime.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Runtime.UnitTests\bin\x64\Debug\SafeExamBrowser.Runtime.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Communication.UnitTests\SafeExamBrowser.Communication.UnitTests.csproj]
+  SafeExamBrowser.Communication.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Communication.UnitTests\bin\x64\Debug\SafeExamBrowser.Communication.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.I18n.UnitTests\SafeExamBrowser.I18n.UnitTests.csproj]
+  SafeExamBrowser.I18n.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.I18n.UnitTests\bin\x64\Debug\SafeExamBrowser.I18n.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Logging.UnitTests\SafeExamBrowser.Logging.UnitTests.csproj]
+  SafeExamBrowser.Logging.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Logging.UnitTests\bin\x64\Debug\SafeExamBrowser.Logging.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Configuration.UnitTests\SafeExamBrowser.Configuration.UnitTests.csproj]
+  SafeExamBrowser.Configuration.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Configuration.UnitTests\bin\x64\Debug\SafeExamBrowser.Configuration.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Lockdown.Contracts\SafeExamBrowser.Lockdown.Contracts.csproj]
+  SafeExamBrowser.Lockdown.Contracts -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Lockdown.Contracts\bin\x64\Debug\SafeExamBrowser.Lockdown.Contracts.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Lockdown\SafeExamBrowser.Lockdown.csproj]
+  SafeExamBrowser.Lockdown -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Lockdown\bin\x64\Debug\SafeExamBrowser.Lockdown.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Service\SafeExamBrowser.Service.csproj]
+  SafeExamBrowser.Service -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Service\bin\x64\Debug\SafeExamBrowser.Service.exe
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Service.UnitTests\SafeExamBrowser.Service.UnitTests.csproj]
+  SafeExamBrowser.Service.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Service.UnitTests\bin\x64\Debug\SafeExamBrowser.Service.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Lockdown.UnitTests\SafeExamBrowser.Lockdown.UnitTests.csproj]
+  SafeExamBrowser.Lockdown.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Lockdown.UnitTests\bin\x64\Debug\SafeExamBrowser.Lockdown.UnitTests.dll
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.ResetUtility\SafeExamBrowser.ResetUtility.csproj]
+  SafeExamBrowser.ResetUtility -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.ResetUtility\bin\x64\Debug\SafeExamBrowser.ResetUtility.exe
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SebWindowsConfig\SebWindowsConfig.csproj]
+  SebWindowsConfig -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SebWindowsConfig\bin\x64\Debug\SEBConfigTool.exe
+EXEC : warning : Integrity module not included! [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SebWindowsConfig\SebWindowsConfig.csproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\Microsoft.CSharp.CurrentVersion.targets(130,9): warning MSB3884: Could not find rule set file "MinimumRecommendedRules.ruleset". [C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser.UnitTests\SafeExamBrowser.Browser.UnitTests.csproj]
+  SafeExamBrowser.Browser.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Browser.UnitTests\bin\x64\Debug\SafeExamBrowser.Browser.UnitTests.dll
+  SafeExamBrowser.Applications.UnitTests -> C:\Users\altorf_a\Downloads\French exam Browser\seb-win-refactoring\SafeExamBrowser.Applications.UnitTests\bin\x64\Debug\SafeExamBrowser.Applications.UnitTests.dll

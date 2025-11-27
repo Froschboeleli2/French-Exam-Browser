@@ -1,0 +1,16 @@
+C:\Windows\assembly\GAC_32\MSBuild\3.5.0.0__b03f5f7f11d50a3a\MSBuild.exe
+C:\Windows\assembly\GAC_64\MSBuild\3.5.0.0__b03f5f7f11d50a3a\MSBuild.exe
+C:\Windows\Microsoft.NET\assembly\GAC_32\MSBuild\v4.0_4.0.0.0__b03f5f7f11d50a3a\MSBuild.exe
+C:\Windows\Microsoft.NET\assembly\GAC_64\MSBuild\v4.0_4.0.0.0__b03f5f7f11d50a3a\MSBuild.exe
+C:\Windows\Microsoft.NET\Framework\v2.0.50727\MSBuild.exe
+C:\Windows\Microsoft.NET\Framework\v3.5\MSBuild.exe
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe
+C:\Windows\Microsoft.NET\Framework64\v2.0.50727\MSBuild.exe
+C:\Windows\Microsoft.NET\Framework64\v3.5\MSBuild.exe
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe
+C:\Windows\WinSxS\amd64_msbuild_b03f5f7f11d50a3a_10.0.22621.1_none_d57969165d3f7d83\MSBuild.exe
+C:\Windows\WinSxS\amd64_msbuild_b03f5f7f11d50a3a_3.5.22621.1_none_238061cca370ca0d\MSBuild.exe
+C:\Windows\WinSxS\amd64_msbuild_b03f5f7f11d50a3a_4.0.15912.0_none_de1bfcc9998a681e\MSBuild.exe
+C:\Windows\WinSxS\wow64_msbuild_b03f5f7f11d50a3a_4.0.15912.0_none_07ea43e35ad4fd3b\MSBuild.exe
+C:\Windows\WinSxS\x86_msbuild_b03f5f7f11d50a3a_10.0.22621.1_none_1d269fed71bba689\MSBuild.exe
+C:\Windows\WinSxS\x86_msbuild_b03f5f7f11d50a3a_3.5.22621.1_none_c761c648eb1358d7\MSBuild.exe

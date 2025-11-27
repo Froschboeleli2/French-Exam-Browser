@@ -22,6 +22,7 @@ namespace SafeExamBrowser.Browser.Handlers
 		internal event ActionRequestedEventHandler ZoomOutRequested;
 		internal event ActionRequestedEventHandler ZoomResetRequested;
 		internal event ActionRequestedEventHandler FocusAddressBarRequested;
+		internal event ActionRequestedEventHandler VocabularyRequested;
 		internal event TabPressedEventHandler TabPressed;
 
 		private int? currentKeyDown = null;
@@ -36,6 +37,12 @@ namespace SafeExamBrowser.Browser.Handlers
 				if (ctrl && keyCode == (int) Keys.F)
 				{
 					FindRequested?.Invoke();
+				}
+
+				// Ctrl+G for vocabulary popup (G = German/Glossary)
+				if (ctrl && keyCode == (int) Keys.G)
+				{
+					VocabularyRequested?.Invoke();
 				}
 
 				if (keyCode == (int) Keys.Home)
