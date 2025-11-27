@@ -1,6 +1,76 @@
-# Safe Exam Browser, Version 3.x
+# Safe Exam Browser, Version 3.x (Modified)
 
 Refactored version of Safe Exam Browser for Windows with Chromium as integrated browser engine.
+
+**This is a modified version with additional features:**
+- ✅ Keyboard shortcuts enabled
+- ✅ All applications allowed in foreground
+- ✅ Vocabulary helper popup (Ctrl+Shift+V)
+
+---
+
+## Building
+
+### Prerequisites
+- Visual Studio 2022 Build Tools (or Visual Studio 2022)
+- .NET Framework 4.8 Developer Pack
+
+### Build Commands
+
+```powershell
+# Navigate to the project folder
+cd seb-win-refactoring
+
+# Build the solution (Debug)
+& "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe" SafeExamBrowser.sln /t:Build /p:Configuration=Debug /m
+
+# Build the solution (Release)
+& "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe" SafeExamBrowser.sln /t:Build /p:Configuration=Release /m
+```
+
+### Output Location
+After building, the executable is located at:
+```
+SafeExamBrowser.Runtime\bin\x64\Debug\SafeExamBrowser.exe
+```
+
+### Create Portable ZIP
+```powershell
+Compress-Archive -Path "SafeExamBrowser.Runtime\bin\x64\Debug\*" -DestinationPath "SEB-3.10.0-portable.zip"
+```
+
+---
+
+## Vocabulary Helper
+
+Press **Ctrl+Shift+V** anywhere in the browser to open a translation popup.
+
+### Vocabulary File Location
+```
+SafeExamBrowser.UserInterface.Desktop\vocabulary.txt
+```
+
+### Format
+```
+# Comments start with #
+German = English
+```
+
+The vocabulary works **both directions** - type either language to get the translation.
+
+**Features:**
+- Case insensitive
+- Fuzzy matching (allows small typos)
+- Accent insensitive (é = e, ü = u, etc.)
+
+### Example entries:
+```
+Apfel = Apple
+Haus = House
+Schule = School
+```
+
+---
 
 ## Requirements
 
