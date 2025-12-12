@@ -9,6 +9,7 @@
 using System;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -47,6 +48,22 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		private bool browserControlGetsFocusFromTaskbar;
 		private IInputElement tabKeyDownFocusElement;
 		private static VocabularyPopup vocabularyPopup;
+		
+		// Global hotkey registration for vocabulary popup
+		private const int HOTKEY_ID_CTRL_SHIFT_V = 9000;
+		private const int HOTKEY_ID_F2 = 9001;
+		private const int MOD_CONTROL = 0x0002;
+		private const int MOD_SHIFT = 0x0004;
+		private const int VK_V = 0x56;
+		private const int VK_F2 = 0x71;
+		private const int WM_HOTKEY = 0x0312;
+		private HwndSource hwndSource;
+		
+		[DllImport("user32.dll")]
+		private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
+		
+		[DllImport("user32.dll")]
+		private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
 		private WindowSettings WindowSettings
 		{
@@ -95,10 +112,24 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 			// Initialize vocabulary popup early so global hotkey gets registered
 			if (isMainWindow && vocabularyPopup == null)
 			{
-				vocabularyPopup = new VocabularyPopup();
-				// Show and hide to trigger Loaded event which registers the global hotkey
-				vocabularyPopup.Show();
-				vocabularyPopup.Hide();
+				Dispatcher.BeginInvoke(new Action(() =>
+				{
+					try
+					{
+						vocabularyPopup = new VocabularyPopup();
+						// Show and hide to trigger Loaded event which registers the global hotkey
+						// Keep window alive by showing it (even if hidden) so hotkey stays registered
+						vocabularyPopup.Show();
+						vocabularyPopup.Hide();
+						// Ensure window doesn't get garbage collected
+						vocabularyPopup.Visibility = Visibility.Hidden;
+						logger?.Info("VocabularyPopup initialized and hotkeys should be registered.");
+					}
+					catch (Exception ex)
+					{
+						logger?.Error($"Failed to initialize VocabularyPopup: {ex.Message}", ex);
+					}
+				}), System.Windows.Threading.DispatcherPriority.Loaded);
 			}
 		}
 
@@ -198,11 +229,24 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		{
 			Dispatcher.InvokeAsync(() =>
 			{
-				if (vocabularyPopup == null)
+				try
 				{
-					vocabularyPopup = new VocabularyPopup();
+					if (vocabularyPopup == null)
+					{
+						logger?.Info("VocabularyPopup is null, creating new instance...");
+						vocabularyPopup = new VocabularyPopup();
+						// Show and hide to register hotkey
+						vocabularyPopup.Show();
+						vocabularyPopup.Hide();
+						vocabularyPopup.Visibility = Visibility.Hidden;
+					}
+					logger?.Info("Toggling vocabulary popup...");
+					vocabularyPopup.TogglePopup();
 				}
-				vocabularyPopup.TogglePopup();
+				catch (Exception ex)
+				{
+					logger?.Error($"Error toggling vocabulary popup: {ex.Message}", ex);
+				}
 			});
 		}
 
@@ -269,6 +313,17 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		{
 			if (isMainWindow)
 			{
+				// Unregister hotkeys before closing
+				if (Handle != IntPtr.Zero)
+				{
+					UnregisterHotKey(Handle, HOTKEY_ID_CTRL_SHIFT_V);
+					UnregisterHotKey(Handle, HOTKEY_ID_F2);
+				}
+				if (hwndSource != null)
+				{
+					hwndSource.RemoveHook(WndProc);
+					hwndSource = null;
+				}
 				e.Cancel = true;
 			}
 			else
@@ -381,7 +436,63 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 			if (isMainWindow)
 			{
 				this.DisableCloseButton();
+				
+				// Register global hotkeys for vocabulary popup on the main window
+				if (Handle != IntPtr.Zero)
+				{
+					hwndSource = HwndSource.FromHwnd(Handle);
+					if (hwndSource != null)
+					{
+						hwndSource.AddHook(WndProc);
+					}
+					
+					// Try to unregister first in case it's already registered
+					UnregisterHotKey(Handle, HOTKEY_ID_CTRL_SHIFT_V);
+					UnregisterHotKey(Handle, HOTKEY_ID_F2);
+					
+					// Register Ctrl+Shift+V
+					var success1 = RegisterHotKey(Handle, HOTKEY_ID_CTRL_SHIFT_V, MOD_CONTROL | MOD_SHIFT, VK_V);
+					if (success1)
+					{
+						logger?.Info("Vocabulary hotkey (Ctrl+Shift+V) registered successfully on BrowserWindow.");
+					}
+					else
+					{
+						var errorCode = Marshal.GetLastWin32Error();
+						logger?.Error($"Failed to register vocabulary hotkey (Ctrl+Shift+V) on BrowserWindow. Error code: {errorCode}");
+					}
+					
+					// Register F2
+					var success2 = RegisterHotKey(Handle, HOTKEY_ID_F2, 0, VK_F2);
+					if (success2)
+					{
+						logger?.Info("Vocabulary hotkey (F2) registered successfully on BrowserWindow.");
+					}
+					else
+					{
+						var errorCode = Marshal.GetLastWin32Error();
+						logger?.Error($"Failed to register vocabulary hotkey (F2) on BrowserWindow. Error code: {errorCode}");
+					}
+				}
 			}
+		}
+		
+		private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
+		{
+			if (msg == WM_HOTKEY)
+			{
+				var hotkeyId = wParam.ToInt32();
+				if (hotkeyId == HOTKEY_ID_CTRL_SHIFT_V || hotkeyId == HOTKEY_ID_F2)
+				{
+					Dispatcher.Invoke(() => 
+					{
+						logger?.Info($"Vocabulary hotkey pressed (ID: {hotkeyId})");
+						ToggleVocabularyPopup();
+					});
+					handled = true;
+				}
+			}
+			return IntPtr.Zero;
 		}
 
 		private void FindbarCloseButton_Click(object sender, RoutedEventArgs e)

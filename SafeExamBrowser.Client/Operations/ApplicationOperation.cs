@@ -85,21 +85,13 @@ namespace SafeExamBrowser.Client.Operations
 			var initialization = monitor.Initialize(Context.Settings.Applications);
 			var result = OperationResult.Success;
 
-			if (initialization.FailedAutoTerminations.Any())
-			{
-				result = HandleAutoTerminationFailure(initialization.FailedAutoTerminations);
-			}
-			else if (initialization.RunningApplications.Any())
-			{
-				result = TryTerminate(initialization.RunningApplications);
-			}
+			// Application closure requirement disabled - skip all termination checks
+			logger.Info("Application closure requirement disabled - skipping termination checks.");
 
-			if (result == OperationResult.Success)
+			// Still initialize whitelisted applications
+			foreach (var application in Context.Settings.Applications.Whitelist)
 			{
-				foreach (var application in Context.Settings.Applications.Whitelist)
-				{
-					Initialize(application);
-				}
+				Initialize(application);
 			}
 
 			return result;

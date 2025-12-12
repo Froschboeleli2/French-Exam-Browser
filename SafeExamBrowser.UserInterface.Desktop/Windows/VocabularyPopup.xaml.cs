@@ -22,10 +22,12 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		private readonly Dictionary<string, string> vocabulary;
 		
 		// Global hotkey registration
-		private const int HOTKEY_ID = 9000;
+		private const int HOTKEY_ID_CTRL_SHIFT_V = 9000;
+		private const int HOTKEY_ID_F2 = 9001;
 		private const int MOD_CONTROL = 0x0002;
 		private const int MOD_SHIFT = 0x0004;
 		private const int VK_V = 0x56;
+		private const int VK_F2 = 0x71;
 		private const int WM_HOTKEY = 0x0312;
 		
 		[DllImport("user32.dll")]
@@ -46,11 +48,34 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		
 		private HwndSource hwndSource;
 		private static VocabularyPopup instance;
+		private static string logFilePath;
+
+		static VocabularyPopup()
+		{
+			// Initialize log file path
+			var appDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SafeExamBrowser", "Logs");
+			if (!Directory.Exists(appDataFolder))
+			{
+				Directory.CreateDirectory(appDataFolder);
+			}
+			var timestamp = DateTime.Now.ToString("yyyy-MM-dd_HHhmmss");
+			logFilePath = Path.Combine(appDataFolder, $"{timestamp}_Vocabulary.log");
+		}
+
+		private static void WriteLog(string message)
+		{
+			try
+			{
+				File.AppendAllText(logFilePath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] {message}\r\n");
+			}
+			catch { }
+		}
 
 		public VocabularyPopup()
 		{
 			InitializeComponent();
 			instance = this;
+			WriteLog("VocabularyPopup created");
 			
 			// Load vocabulary from file
 			vocabulary = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
@@ -61,6 +86,14 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 			Deactivated += (s, e) => HidePopup();
 			Loaded += VocabularyPopup_Loaded;
 			Closed += VocabularyPopup_Closed;
+			
+			// Prevent window from being closed - keep it alive for hotkey
+			Closing += (s, args) => 
+			{
+				// Prevent closing - just hide instead to keep hotkey registered
+				args.Cancel = true;
+				Hide();
+			};
 		}
 		
 		private void LoadVocabularyFromFile()
@@ -114,26 +147,89 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		{
 			// Register global hotkey (Ctrl+Shift+V)
 			var helper = new WindowInteropHelper(this);
-			hwndSource = HwndSource.FromHwnd(helper.Handle);
-			hwndSource?.AddHook(HwndHook);
-			RegisterHotKey(helper.Handle, HOTKEY_ID, MOD_CONTROL | MOD_SHIFT, VK_V);
+			var handle = helper.Handle;
+			
+			if (handle == IntPtr.Zero)
+			{
+				// Handle not ready yet, try again after window is fully shown
+				Dispatcher.BeginInvoke(new Action(() => 
+				{
+					var helper2 = new WindowInteropHelper(this);
+					if (helper2.Handle != IntPtr.Zero)
+					{
+						RegisterHotKeyInternal(helper2.Handle);
+					}
+				}), System.Windows.Threading.DispatcherPriority.Loaded);
+				return;
+			}
+			
+			RegisterHotKeyInternal(handle);
 			InputBox.Focus();
+		}
+		
+		private void RegisterHotKeyInternal(IntPtr handle)
+		{
+			hwndSource = HwndSource.FromHwnd(handle);
+			if (hwndSource != null)
+			{
+				hwndSource.AddHook(HwndHook);
+			}
+			
+			// Try to unregister first in case it's already registered
+			UnregisterHotKey(handle, HOTKEY_ID_CTRL_SHIFT_V);
+			UnregisterHotKey(handle, HOTKEY_ID_F2);
+			
+			// Register Ctrl+Shift+V
+			var success1 = RegisterHotKey(handle, HOTKEY_ID_CTRL_SHIFT_V, MOD_CONTROL | MOD_SHIFT, VK_V);
+			if (!success1)
+			{
+				var errorCode = System.Runtime.InteropServices.Marshal.GetLastWin32Error();
+				WriteLog($"Failed to register vocabulary hotkey (Ctrl+Shift+V). Error code: {errorCode}");
+			}
+			else
+			{
+				WriteLog("Vocabulary hotkey (Ctrl+Shift+V) registered successfully.");
+			}
+			
+			// Register F2
+			var success2 = RegisterHotKey(handle, HOTKEY_ID_F2, 0, VK_F2);
+			if (!success2)
+			{
+				var errorCode = System.Runtime.InteropServices.Marshal.GetLastWin32Error();
+				WriteLog($"Failed to register vocabulary hotkey (F2). Error code: {errorCode}");
+			}
+			else
+			{
+				WriteLog("Vocabulary hotkey (F2) registered successfully.");
+			}
 		}
 		
 		private void VocabularyPopup_Closed(object sender, EventArgs e)
 		{
-			// Unregister global hotkey
+			// Unregister global hotkeys
 			var helper = new WindowInteropHelper(this);
-			UnregisterHotKey(helper.Handle, HOTKEY_ID);
+			UnregisterHotKey(helper.Handle, HOTKEY_ID_CTRL_SHIFT_V);
+			UnregisterHotKey(helper.Handle, HOTKEY_ID_F2);
 			hwndSource?.RemoveHook(HwndHook);
+			hwndSource = null;
 		}
 		
 		private IntPtr HwndHook(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
 		{
-			if (msg == WM_HOTKEY && wParam.ToInt32() == HOTKEY_ID)
+			if (msg == WM_HOTKEY)
 			{
-				TogglePopup();
-				handled = true;
+				var hotkeyId = wParam.ToInt32();
+				if (hotkeyId == HOTKEY_ID_CTRL_SHIFT_V || hotkeyId == HOTKEY_ID_F2)
+				{
+					// Use Dispatcher to ensure we're on the UI thread
+					Dispatcher.Invoke(() => 
+					{
+						var hotkeyName = hotkeyId == HOTKEY_ID_CTRL_SHIFT_V ? "Ctrl+Shift+V" : "F2";
+						WriteLog($"Vocabulary hotkey pressed: {hotkeyName} (ID: {hotkeyId})");
+						TogglePopup();
+					});
+					handled = true;
+				}
 			}
 			return IntPtr.Zero;
 		}
@@ -171,18 +267,29 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 		{
 			input = NormalizeForFuzzy(input);
 			
+			string bestMatch = null;
+			int bestDistance = int.MaxValue;
+			
 			foreach (var kvp in vocabulary)
 			{
 				var key = NormalizeForFuzzy(kvp.Key);
 				
-				// Check if similar enough (allows small typos)
-				if (IsSimilar(input, key))
+				// Calculate distance for this entry
+				int distance = LevenshteinDistance(input, key);
+				
+				// Check if this is a better match than what we have
+				if (distance < bestDistance && IsSimilar(input, key, distance))
 				{
-					return kvp.Value;
+					bestDistance = distance;
+					bestMatch = kvp.Value;
+					
+					// If we found an exact match, stop searching
+					if (distance == 0)
+						break;
 				}
 			}
 			
-			return null;
+			return bestMatch;
 		}
 
 		private string NormalizeForFuzzy(string text)
@@ -213,7 +320,7 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 				.Replace("æ", "ae");
 		}
 
-		private bool IsSimilar(string input, string target)
+		private bool IsSimilar(string input, string target, int distance = -1)
 		{
 			// Exact match after normalization
 			if (input == target) return true;
@@ -221,8 +328,9 @@ namespace SafeExamBrowser.UserInterface.Desktop.Windows
 			// If lengths differ by more than 2, not similar
 			if (Math.Abs(input.Length - target.Length) > 2) return false;
 			
-			// Calculate Levenshtein distance
-			int distance = LevenshteinDistance(input, target);
+			// Calculate Levenshtein distance if not provided
+			if (distance < 0)
+				distance = LevenshteinDistance(input, target);
 			
 			// Allow up to 2 character mistakes for words >= 4 chars
 			// Allow 1 mistake for shorter words

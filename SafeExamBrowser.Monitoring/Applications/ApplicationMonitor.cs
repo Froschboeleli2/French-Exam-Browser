@@ -152,10 +152,7 @@ namespace SafeExamBrowser.Monitoring.Applications
 				{
 					HandleExplorerStart(process);
 				}
-				else if (!IsAllowed(process) && !TryTerminate(process))
-				{
-					AddFailed(process, failed);
-				}
+				// Application closure requirement disabled - all processes are allowed
 				else if (IsWhitelisted(process, out var applicationId))
 				{
 					HandleInstanceStart(applicationId.Value, process);
@@ -290,27 +287,8 @@ namespace SafeExamBrowser.Monitoring.Applications
 
 			logger.Debug($"Initialized blacklist with {blacklist.Count} applications{(blacklist.Any() ? $": {string.Join(", ", blacklist.Select(a => a.ExecutableName))}" : ".")}");
 
-			foreach (var process in processes)
-			{
-				foreach (var application in blacklist)
-				{
-					var isBlacklisted = BelongsToApplication(process, application);
-
-					if (isBlacklisted)
-					{
-						if (!application.AutoTerminate)
-						{
-							AddForTermination(application.ExecutableName, process, result);
-						}
-						else if (application.AutoTerminate && !TryTerminate(process))
-						{
-							AddFailed(application.ExecutableName, process, result);
-						}
-
-						break;
-					}
-				}
-			}
+			// Application closure requirement disabled - don't add any applications for termination
+			logger.Info("Application closure requirement disabled - all applications are allowed to run.");
 		}
 
 		private void InitializeWhitelist(ApplicationSettings settings, InitializationResult result)
@@ -322,27 +300,8 @@ namespace SafeExamBrowser.Monitoring.Applications
 
 			logger.Debug($"Initialized whitelist with {whitelist.Count} applications{(whitelist.Any() ? $": {string.Join(", ", whitelist.Select(a => a.ExecutableName))}" : ".")}");
 
-			foreach (var process in processes)
-			{
-				foreach (var application in whitelist)
-				{
-					var isWhitelisted = BelongsToApplication(process, application);
-
-					if (isWhitelisted)
-					{
-						if (!application.AllowRunning && !application.AutoTerminate)
-						{
-							AddForTermination(application.ExecutableName, process, result);
-						}
-						else if (!application.AllowRunning && application.AutoTerminate && !TryTerminate(process))
-						{
-							AddFailed(application.ExecutableName, process, result);
-						}
-
-						break;
-					}
-				}
-			}
+			// Application closure requirement disabled - don't add any applications for termination
+			logger.Info("Application closure requirement disabled - all applications are allowed to run.");
 		}
 
 		private bool IsAllowed(IProcess process)

@@ -14,6 +14,8 @@ Kirsche = Cherry
 Zitrone = Lemon
 
 # House
+abc = Hello
+axx = bye
 Haus = House
 Tür = Door
 Fenster = Window
